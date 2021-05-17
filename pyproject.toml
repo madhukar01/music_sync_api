@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "music_sync"
+version = "0.1.0"
+description = "Music sync"
+authors = ["madhukar01 <mholla8@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.dev-dependencies]
+yapf = "^0.31.0"
+pylint = "^2.8.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
