@@ -1,7 +1,6 @@
 import uvicorn
-from fastapi import FastAPI
-
 from config import *
+from fastapi import FastAPI
 
 # Initialize FastAPI server
 app = FastAPI(debug=APP_DEBUG,
