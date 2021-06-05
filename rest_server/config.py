@@ -1,0 +1,2 @@
+APP_DEBUG = True
+APP_DESCRIPTION = "Music Sync"
