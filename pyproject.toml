@@ -1,0 +1,51 @@
+[tool.poetry]
+name = "music_sync"
+version = "0.1.0"
+description = "Music sync"
+authors = ["madhukar01 <mholla8@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+fastapi = "^0.65.1"
+uvicorn = {extras = ["standard"], version = "^0.13.4"}
+
+[tool.poetry.dev-dependencies]
+yapf = "^0.31.0"
+pylint = "^2.8.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.isort]
+default_section = "THIRDPARTY"
+known_first_party = ["kernelSDK", "platformSDK", "messagePackets"]
+sections = ["FUTURE", "STDLIB", "THIRDPARTY", "FIRSTPARTY", "LOCALFOLDER"]
+lines_between_sections = 1
+force_grid_wrap = 0
+use_parentheses = true
+multi_line_output = 2
+float_to_top = true
+
+
+[tool.pylint.master]
+load-plugins = "pylint_protobuf"
+jobs = 0
+max-line-length = 79
+suggestion-mode = "yes"
+persistent = "yes"
+variable-rgx = "^[a-z][a-z0-9_]*$"
+good-names = [
+    "e",
+]
+
+[tool.pylint.messages_control]
+disable = [
+    "missing-module-docstring",
+    "raise-missing-from",
+    "broad-except"
+]
+
+[tool.yapf]
+based_on_style = "google"
+column_limit = 79
