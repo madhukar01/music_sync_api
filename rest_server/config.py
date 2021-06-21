@@ -1,3 +1,4 @@
 APP_DEBUG = True
 APP_DESCRIPTION = "Music Sync"
+APP_NAME = "Music Sync"
 APP_VERSION = 0.0.1
